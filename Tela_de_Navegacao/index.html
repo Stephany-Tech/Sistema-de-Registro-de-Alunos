@@ -1,11 +1,257 @@
+<?php
+// index.php - Página inicial do Sistema de Registro de Alunos
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema de Registro de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        Sistema de Registro de Alunos
+    </header>
+
+    <nav>
+        <a href="cadastrar_aluno.php">Cadastrar Aluno</a>
+        <a href="listar_alunos.php">Listar Alunos</a>
+        <a href="cadastrar_curso.php">Cadastrar Cursos</a>
+        <a href="relatorios.php">Relatórios</a>
+    </nav>
+
+    <div class="container">
+        <h2>Bem-vindo ao Sistema</h2>
+        <p>Use o menu acima para navegar pelo sistema.</p>
+    </div>
+
+</body>
+</html>
+<?php
+// cadastrar_aluno.php - Página para cadastro de alunos
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Aluno</title>
+</head>
+<body>
+    <h2>Cadastrar Aluno</h2>
+    <form method="POST" action="">
+        <label>Nome:</label><br>
+        <input type="text" name="nome" required><br><br>
+
+        <label>Matrícula:</label><br>
+        <input type="text" name="matricula" required><br><br>
+
+        <label>Curso:</label><br>
+        <input type="text" name="curso" required><br><br>
+
+        <input type="submit" value="Salvar">
+    </form>
+
+    <br>
+    <a href="index.php">⬅ Voltar para Página Inicial</a>
+</body>
+</html>
+<?php
+// index.php - Página inicial do Sistema de Registro de Alunos
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Registro de Alunos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Sistema de Registro de Alunos
+    </header>
+
+    <nav>
+        <a href="cadastrar_aluno.php">Cadastrar Aluno</a>
+        <a href="listar_alunos.php">Listar Alunos</a>
+        <a href="cadastrar_curso.php">Cadastrar Cursos</a>
+        <a href="relatorios.php">Relatórios</a>
+    </nav>
+
+    <div class="container">
+        <h2>Bem-vindo ao Sistema</h2>
+        <p>Use o menu acima para navegar pelo sistema.</p>
+    </div>
+
+</body>
+</html>
+<?php
+// listar_alunos.php - Página para listar alunos
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Alunos</title>
+</head>
+<body>
+    <h2>Lista de Alunos</h2>
+    <p>Aqui você exibirá os alunos cadastrados no sistema.</p>
+
+    <br>
+    <a href="index.php">⬅ Voltar para Página Inicial</a>
+</body>
+</html>
+<?php
+// cadastrar_curso.php - Página para cadastro de cursos
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Cursos</title>
+</head>
+<body>
+    <h2>Cadastrar Curso</h2>
+    <form method="POST" action="">
+        <label>Nome do Curso:</label><br>
+        <input type="text" name="nome_curso" required><br><br>
+
+        <label>Carga Horária:</label><br>
+        <input type="number" name="carga_horaria" required><br><br>
+
+        <input type="submit" value="Salvar">
+    </form>
+
+    <br>
+    <a href="index.php">⬅ Voltar para Página Inicial</a>
+</body>
+</html>
+<?php
+// relatorios.php - Página para relatórios
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatórios</title>
+</head>
+<body>
+    <h2>Relatórios</h2>
+    <p>Aqui você pode gerar relatórios de alunos e cursos.</p>
+
+    <br>
+    <a href="index.php">⬅ Voltar para Página Inicial</a>
 </body>
 </html>
