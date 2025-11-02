@@ -27,7 +27,7 @@ create table ALUNO (
   e_mail varchar (150) not null,
   filiacao_mae varchar(100) not null,
   filiacao_pai varchar(100) not null,
-  acompanhamento_especial char (3) null
+  acompanhamento_especial boolean null
 );
 
 
