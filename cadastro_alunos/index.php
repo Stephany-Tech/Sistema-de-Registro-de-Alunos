@@ -76,7 +76,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $conn->prepare($sql);
 
     if ($stmt) {
-        // Corrigido: adicionada uma nova letra 's' para o campo cidade_natal
         $stmt->bind_param("ssssssssssssssssssssssss", 
             $nome, $email, $data_nascimento, $cep, $rua, $bairro, $numero, $complemento, $sexo, 
             $nome_social, $nacionalidade, $naturalidade_uf, $cidade_natal, $cpf, $cpf_path, $rg, $rg_path, 
@@ -166,7 +165,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #575757; 
             border-radius: 4px;
         }
-        /* Fim das adições de Header e Nav */
+       
 
         .container {
             background-color: #fff;
@@ -178,7 +177,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             margin: 20px 0; /* Espaçamento após o nav/header */
         }
         
-        /* O h1 estava fora do contêiner e não foi especificado, então mantive uma cor de destaque no lugar */
         .container h1 { 
             color: #007BFF; /* Usando a cor azul principal do cabeçalho */
             margin-bottom: 1em;
@@ -197,7 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             font-weight: bold;
         }
         
-        /* 8) Texto dos parágrafos (p) - Embora não haja <p> explícitos, apliquei ao texto padrão do formulário (labels, etc.) */
+        /* 8) Texto dos parágrafos (p) -  */
         label {
             font-weight: bold;
             margin-bottom: 0.25em;
@@ -231,7 +229,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         
         input[type="submit"] {
-            /* Usando a cor azul principal para o botão de cadastro */
             background-color: #007BFF; 
             color: white;
             padding: 0.8em;
@@ -421,4 +418,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </form>
     </div>
 </body>
+
 </html>
